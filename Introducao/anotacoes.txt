@@ -1,1 +1,20 @@
-Anotações
+Git - Sistema de versionamento (Interno - offline)
+GitHub - Sistema de versionamento (Server - Online)
+
+Git não utiliza interface gráfica, aceita somente linha de comando via Git Bash.
+Git encripta arquivos usando uma hash SHA1 com 40 digitos.
+
+Autenticação por meio de chave ssh é o meio mais seguro de se autenticar no GitHub. O token de acesso pessoal pode ser usado para autenticar em maquinas de terceiros, por exemplo.
+Principais comandos:
+Gerar chave ssh:
+	ssh-keygen -t ed25519 -C "email"
+	cat "id_ed25519.pub"
+	eval $(ssh-agent -s)
+	ssh-add id_ed25519
+Outros comandos:
+git init -> inicializa um repositorio.
+git config --global user.email -> configura email cadastrado no GitHub.
+git config --global user.name -> configura nome de usuario cadastrado no GitHub.
+git status -> verifica estado dos arquivos.
+git add * -> adiciona arquivos ao repositório.
+git commit -m "comentario sobre alteração feita" -> Comita as alterações feitas.
